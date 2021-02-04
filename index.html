@@ -13,9 +13,22 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <!-- SEO -->
+    <meta name="google-site-verification" content="2b5b_CiIIXPI-vuOw8ncYEPaQ9UU_GGBcUW9sj2lM5M" />
+    <meta name="rating" content="general" />
+    <meta name="author" content="Neves & Associados">
+    <meta name="description"
+        content="Serviços de Contabilidade Pública e Privada, Auditoria e Controladoria, Gestão Educacional, Hospitalar e Empresarial, Licitações e Contratos,  Prestação de Serviços em Petrolina e Região">
+    <meta name="keywords" content="Neves & Associados, Gestão, Consultoria, Contabilidade">
+    <meta http-equiv="content-language" content="pt-br" />
+    <meta property="og:site_name" content="Neves & Associados Gestão ConsultoriaContabilidade">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.neveseassociados.com.br">
+
 </head>
 
 <body>
+    <!-- Herader -->
     <header>
         <nav id="navbar">
             <div class="nav-wrapper blue darken-4">
@@ -27,10 +40,12 @@
         <div class="col s12 m12 center title">
             <h2>Nosso site está em desenvolvimento</h2>
             <p>Mas já estamos a disposição para atendê-lo</p>
-            <a href="https://www.instagram.com/neveseassociados"
-                class="waves-effect waves-light btn blue darken-4" target="blank">Saiba Mais</a>
+            <a href="https://www.instagram.com/neveseassociados" class="waves-effect waves-light btn blue darken-4"
+                target="blank">Saiba Mais</a>
         </div>
     </header>
+
+    <!-- Main -->
     <main>
         <div class="container">
             <h2>Quem Somos</h2><br>
@@ -55,26 +70,27 @@
                 satisfação dos nossos investidores, associados, clientes, colaboradores, fornecedores, objetivando
                 consolidar-se no seguimento de prestação de serviços, gestão e consultoria.</p>
 
+            <!-- Form -->
             <div id="formulario">
                 <h2>Fale Conosco</h2>
                 <p>Dúvidas, críticas ou sugestões? Entre em contato conosco, seu feedback é muito importante.</p> <br>
 
-                <form action="" method="POST">
+                <form action="./php/email.php" method="POST">
 
                     <div class="input-field col s12 l6">
-                        <input type="text" id="first_name" class="validate" required>
+                        <input id="first_name" type="text" name="name" class="validate" required>
                         <label for="first_name">Seu nome</label>
                     </div>
                     <div class="input-field col s12 l6">
-                        <input type="text" id="subject" class="validate" required>
+                        <input id="subject" type="text" name="subject" class="validate" required>
                         <label for="subject">Assunto</label>
                     </div>
                     <div class="input-field col s12">
-                        <input type="email" id="email" class="validate">
-                        <label for="email" data-error="wrong" data-success="right" required>Email</label>
+                        <input id="email" type="email" name="email" class="validate" required>
+                        <label for="email" data-error="wrong" data-success="right">Email</label>
                     </div>
                     <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea" maxlength="500" required></textarea>
+                        <textarea id="textarea1" name="message" class="materialize-textarea" maxlength="500" required></textarea>
                         <label for="textarea1">Mensagem</label>
                     </div>
                     <button class="btn waves-effect waves-light blue darken-4" type="submit" name="action">Enviar
@@ -84,8 +100,9 @@
                 </form>
             </div>
         </div>
-    </main>
+    </main> 
 
+    <!-- Footer -->
     <footer class="page-footer blue darken-4">
         <div class="container">
             <div class="row">
@@ -108,7 +125,7 @@
                 </div>
                 <div class="col s12 m4 l6 find">
                     <h3 class="white-text">Onde nos encontrar</h3><br>
-                    
+
                     <a class="grey-text text-lighten-4"
                         href="https://www.google.com/maps/place/Galeria+Manhattan+Center/@-9.4004717,-40.5009218,19.5z/data=!4m5!3m4!1s0x0:0x2e757044b5e97e7d!8m2!3d-9.4004056!4d-40.50096"
                         target="blank">
@@ -124,7 +141,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2021
+                © 2021 Neves & Associados
                 <a class="grey-text text-lighten-4 right" href="https://github.com/Augusto-Neves"
                     target="blank">Desenvolvido por <strong>Augusto Neves</strong> </a>
             </div>
