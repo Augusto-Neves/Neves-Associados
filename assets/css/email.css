@@ -1,0 +1,99 @@
+/* Fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Reset Css */
+
+* {  
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0
+}
+/*Media Queries*/
+
+@media (min-width: 60rem) {
+    header {
+        width: 100%;              
+        justify-content: center;
+        align-items: center;
+    }   
+}
+
+@media (min-width: 22.5rem) {
+  
+    body {
+        display: block;
+       
+    }
+    header {
+        height: 200px;
+    } 
+}
+
+@media (min-width: 20rem) {
+    
+    html{
+        display: block;
+    }          
+}
+html, body {
+    font-family: 'Roboto', sans-serif;    
+
+    box-sizing: border-box;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+   
+}
+
+main {
+    flex: 1 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+main p{
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+/* Navbar*/
+
+#navbar {
+    height: 110px;
+}
+
+.brand-logo h1{
+    margin-top: 0px;
+}
+
+/* Rodapé */
+
+.midias a img{
+    width: 1.625em;
+    height: 1.625em;
+    display: inline;
+    justify-content: space-between;
+
+    margin-left: 1em;
+}
+
+.find .material-icon{
+   font-size: 1.625em;
+   margin-right: 6px;
+}
+
+.find a p{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;    
+
+    margin-right: 12px;
+}
+.find a p{
+    font-size: 1.2em;
+    font-weight: 400;
+}
