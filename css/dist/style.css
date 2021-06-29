@@ -25,6 +25,7 @@ body {
   font-family: "Open Sans", Sans-serif;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .container {
@@ -44,7 +45,7 @@ body {
 
 .full-screen-video-container {
   position: relative;
-  height: 80vh;
+  min-height: 80vh;
   width: 100vw;
   overflow: hidden;
   background: linear-gradient(to right, #00000093, #00000093), no-repeat top center;
@@ -53,7 +54,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 1rem 2%;
 }
 .full-screen-video-container > .container .logo a img {
   width: 125px;
@@ -125,15 +126,44 @@ body {
   padding: 0.625rem;
   text-align: center;
 }
-#services .container h3 {
+#services .container .header h3 {
   color: var(--black);
   font-weight: 600;
   text-transform: uppercase;
   line-height: 3.125rem;
 }
-#services .container h2 {
+#services .container .header h2 {
   color: var(--blue);
   text-transform: capitalize;
   font-size: var(--h2-title);
   line-height: 3.125rem;
+}
+#services .container .card {
+  display: flex;
+  max-width: 800px;
+  margin: 80px auto;
+  gap: 80px;
+}
+#services .container .card .card-img img {
+  width: 300px;
+}
+#services .container .card .card-text p {
+  font-size: var(--p-regular);
+  font-weight: 400;
+  color: var(--black);
+  padding: 20px 0;
+}
+#services .container .card .card-text .card-text-header h3 {
+  color: var(--black);
+  font-size: var(--h2-bigger);
+}
+#services .container .card .card-text .card-text-header h2 {
+  color: var(--blue);
+  font-size: var(--h2-title);
+}
+#services .container .card:nth-child(3) .card-img {
+  order: 2;
+}
+#services .container .card:nth-child(3) .card-text {
+  order: 1;
 }
