@@ -43,6 +43,46 @@ body {
   margin: 0 auto;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  padding: 0.625rem;
+  text-align: center;
+}
+.header h3 {
+  color: var(--black);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 3.125rem;
+}
+.header h2 {
+  color: var(--blue);
+  font-size: var(--h2-title);
+  line-height: 3.125rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 45px;
+  color: var(--white);
+  background: var(--blue);
+  font-size: var(--p-regular);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0px 10px 13px -7px #000000, 3px 0px 4px 0px rgba(0, 0, 0, 0);
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.button:hover {
+  filter: brightness(1.5);
+  transform: scale(1.1);
+}
+
 .full-screen-video-container {
   position: relative;
   min-height: 80vh;
@@ -119,25 +159,6 @@ body {
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-#services .container .header {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5rem;
-  padding: 0.625rem;
-  text-align: center;
-}
-#services .container .header h3 {
-  color: var(--black);
-  font-weight: 600;
-  text-transform: uppercase;
-  line-height: 3.125rem;
-}
-#services .container .header h2 {
-  color: var(--blue);
-  text-transform: capitalize;
-  font-size: var(--h2-title);
-  line-height: 3.125rem;
-}
 #services .container .card {
   display: flex;
   max-width: 800px;
