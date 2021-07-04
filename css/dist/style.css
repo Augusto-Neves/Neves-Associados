@@ -250,7 +250,8 @@ footer > .container h3 {
 }
 footer > .container .social-midias {
   width: 50%;
-  padding: 1.4rem 0;
+  padding-top: 50px;
+  padding-bottom: 80px;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -266,9 +267,29 @@ footer > .container .social-midias ul li a {
 }
 footer > .container .find-us {
   width: 50%;
-  padding: 1.4rem 0;
+  padding-top: 50px;
+  padding-bottom: 80px;
   color: var(--white);
 }
 footer > .container .find-us p {
   padding: 0 1rem;
+}
+footer .copyright {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  background: var(--blue-lighter);
+  color: var(--white);
+}
+footer .copyright span {
+  padding: 0.7rem 0;
+}
+footer .copyright a {
+  text-decoration: none;
+  color: var(--white);
+  transition: 0.5s;
+}
+footer .copyright a:hover {
+  filter: brightness(0.8);
+  text-decoration: underline;
 }

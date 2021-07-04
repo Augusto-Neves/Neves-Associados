@@ -315,7 +315,8 @@ footer {
 
         .social-midias {
             width: 50%;
-            padding: 1.4rem 0;
+            padding-top: 50px;
+            padding-bottom: 80px;
             color: var(--white);
             display: flex;
             flex-direction: column;
@@ -334,13 +335,36 @@ footer {
 
         .find-us {
             width: 50%;
-            padding: 1.4rem 0;
+            padding-top: 50px;
+            padding-bottom: 80px;
             color: var(--white);
 
             p {
                 padding: 0 1rem;
             }
+        }
+    }
 
+    .copyright {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-around;
+        background: var(--blue-lighter);
+        color: var(--white);
+
+        span{
+            padding: 0.7rem 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: var(--white);
+            transition: 0.5s;
+
+            &:hover{
+                filter: brightness(0.8);
+                text-decoration: underline;
+            }
         }
     }
 }
