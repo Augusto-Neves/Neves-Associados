@@ -37,16 +37,15 @@ body {
 .container {
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 2%;
 }
 
 .divider {
+    width: 90%;
+    height: 1px;
+    padding: 0 2%;
     text-align: center;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    width: 70%;
-    min-width: 1280px;
     background-color: var(--white);
-    margin: 0 auto;
 }
 
 .header {
@@ -97,6 +96,56 @@ body {
     }
 }
 
+//Desktop Menu e Mobile Menu
+.desktop-menu {
+
+    a {
+        color: var(--white);
+        text-decoration: none;
+        padding: 0.9375rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: 0.4s;
+
+        &:hover {
+            font-size: 1.1rem;
+        }
+    }
+
+    ul li {
+        display: inline-block;
+        list-style: none;
+    }
+}
+
+#mobile-menu {
+    display: none;    
+
+    a {
+        color: var(--white);
+        text-decoration: none;
+        padding: 0.9375rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: 0.4s;
+    }
+
+    ul li {
+        display: block;
+        list-style: none;
+    }
+
+    &.active {
+        display: flex;
+        width: 80%;        
+    }
+}
+
+
+#btn-mobile {
+    display: none;
+}
+
 //Header
 
 .full-screen-video-container {
@@ -120,31 +169,7 @@ body {
             width: 125px;
         }
 
-        .desktop-menu {
-            float: left;
 
-            a {
-                color: var(--white);
-                text-decoration: none;
-                padding: 0.9375rem;
-                font-weight: 500;
-                text-transform: uppercase;
-                transition: 0.4s;
-
-                &:hover {
-                    font-size: 1.1rem;
-                }
-            }
-
-            ul li {
-                display: inline-block;
-                list-style: none;
-            }
-        }
-
-        .mobile-menu {
-            display: none;
-        }
     }
 
     video {
@@ -266,6 +291,7 @@ body {
         }
 
         h3 {
+            text-align: center;
             color: var(--blue);
         }
 
@@ -346,25 +372,128 @@ footer {
     }
 
     .copyright {
-        display: flex;
-        gap: 1rem;
-        justify-content: space-around;
         background: var(--blue-lighter);
-        color: var(--white);
 
-        span{
-            padding: 0.7rem 0;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            color: var(--white);
+
+            span {
+                padding: 0.7rem 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--white);
+                transition: 0.5s;
+
+                &:hover {
+                    filter: brightness(0.8);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    #mobile-menu {        
+        position: absolute;
+        width: 0;
+        height: calc(100vh);
+        top: 0;
+        right: 0;
+        background: var(--blue);
+        align-items: flex-start; 
+        justify-content: center; 
+        text-align: center;
+        z-index: 1000;
+        
+        ul li{            
+            position: relative;            
+            top: 100px;
+            margin: 20px;
+        }
+    }
+
+    #btn-mobile {
+        display: block;
+        padding: 5px;
+        margin-right: 1rem;
+        z-index: 99999;
+        
+    }
+
+    //Serviços
+    #services .container {
+        .card {
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+
+            &:nth-child(3) {
+                .card-img {
+                    order: 1;
+                }
+
+                .card-text {
+                    order: 2;
+                }
+            }
         }
 
-        a{
-            text-decoration: none;
-            color: var(--white);
-            transition: 0.5s;
+        .card-text {
+            text-align: center;
 
-            &:hover{
-                filter: brightness(0.8);
-                text-decoration: underline;
+            .button {
+                margin: 0 auto;
             }
+        }
+    }
+
+    //Diferenciais
+    #differentials {
+
+        .container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .why-choose-card {
+                width: 80%;
+            }
+        }
+    }
+
+    //Footer
+    footer> {
+        .container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .social-midias {
+                width: 100%;
+                padding-bottom: 0;
+            }
+
+            .find-us {
+                width: 100%;
+                text-align: center;
+
+
+            }
+        }
+
+        .copyright>.container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

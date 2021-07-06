@@ -26,27 +26,18 @@
             <div class="container">
                 <div class="logo">
                     <a href="#"><img src="./img/logo.png" alt="Neves e Associados Logo"></a>
-                </div>
-                <nav class="desktop-menu">
+                </div>                
+                <nav class="desktop-menu">                    
                     <ul>
                         <li><a href="#">Início</a></li>
                         <li><a href="#">Quem Somos</a></li>
                         <li><a href="#">Serviços</a></li>
                         <li><a href="#">Contato</a></li>
                     </ul>
-                </nav>
-
-                <nav class="mobile-menu">
-                    <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Quem Somos</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </nav>
+                </nav>                
             </div>
 
-
+            <!-- Background Video -->
             <video autoplay loop muted>
                 <source src="./videos/background-video.mp4" type="video/mp4">
             </video>
@@ -61,6 +52,15 @@
             </div>
         </div>
     </header>
+    <nav id="mobile-menu"> 
+        <button id="btn-mobile">Menu</button>                                       
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Quem Somos</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
 
     <!-- Main -->
     <main>
@@ -192,9 +192,14 @@
             </div>
         </div>
         <div class="copyright">
-            <span>© 2021 Neves & Associados</span><span>Desenvolvido por <a href="">Augusto Neves</a></span>
+            <div class="container">
+                <span>© 2021 Neves & Associados</span><span>Desenvolvido por <a href="">Augusto Neves</a></span>
+            </div>
         </div>
     </footer>
+
+    <!-- Scripts JS -->
+    <script src="./js/mobileMenu.js"></script>
 </body>
 
 </html>

@@ -31,16 +31,15 @@ body {
 .container {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 2%;
 }
 
 .divider {
+  width: 90%;
+  height: 1px;
+  padding: 0 2%;
   text-align: center;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  width: 70%;
-  min-width: 1280px;
   background-color: var(--white);
-  margin: 0 auto;
 }
 
 .header {
@@ -83,6 +82,46 @@ body {
   transform: scale(1.1);
 }
 
+.desktop-menu a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.9375rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+.desktop-menu a:hover {
+  font-size: 1.1rem;
+}
+.desktop-menu ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+#mobile-menu {
+  display: none;
+}
+#mobile-menu a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.9375rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+#mobile-menu ul li {
+  display: block;
+  list-style: none;
+}
+#mobile-menu.active {
+  display: flex;
+  width: 80%;
+}
+
+#btn-mobile {
+  display: none;
+}
+
 .full-screen-video-container {
   position: relative;
   min-height: 80vh;
@@ -98,27 +137,6 @@ body {
 }
 .full-screen-video-container > .container .logo a img {
   width: 125px;
-}
-.full-screen-video-container > .container .desktop-menu {
-  float: left;
-}
-.full-screen-video-container > .container .desktop-menu a {
-  color: var(--white);
-  text-decoration: none;
-  padding: 0.9375rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: 0.4s;
-}
-.full-screen-video-container > .container .desktop-menu a:hover {
-  font-size: 1.1rem;
-}
-.full-screen-video-container > .container .desktop-menu ul li {
-  display: inline-block;
-  list-style: none;
-}
-.full-screen-video-container > .container .mobile-menu {
-  display: none;
 }
 .full-screen-video-container video {
   position: absolute;
@@ -210,6 +228,7 @@ body {
   color: var(--blue);
 }
 #differentials .container .why-choose-card h3 {
+  text-align: center;
   color: var(--blue);
 }
 #differentials .container .why-choose-card p {
@@ -275,21 +294,99 @@ footer > .container .find-us p {
   padding: 0 1rem;
 }
 footer .copyright {
-  display: flex;
-  gap: 1rem;
-  justify-content: space-around;
   background: var(--blue-lighter);
+}
+footer .copyright .container {
+  display: flex;
+  justify-content: space-between;
   color: var(--white);
 }
-footer .copyright span {
+footer .copyright .container span {
   padding: 0.7rem 0;
 }
-footer .copyright a {
+footer .copyright .container a {
   text-decoration: none;
   color: var(--white);
   transition: 0.5s;
 }
-footer .copyright a:hover {
+footer .copyright .container a:hover {
   filter: brightness(0.8);
   text-decoration: underline;
+}
+
+@media screen and (max-width: 650px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    width: 0;
+    height: calc(100vh);
+    top: 0;
+    right: 0;
+    background: var(--blue);
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    z-index: 1000;
+  }
+  #mobile-menu ul li {
+    position: relative;
+    top: 100px;
+    margin: 20px;
+  }
+
+  #btn-mobile {
+    display: block;
+    padding: 5px;
+    margin-right: 1rem;
+    z-index: 99999;
+  }
+
+  #services .container .card {
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+  #services .container .card:nth-child(3) .card-img {
+    order: 1;
+  }
+  #services .container .card:nth-child(3) .card-text {
+    order: 2;
+  }
+  #services .container .card-text {
+    text-align: center;
+  }
+  #services .container .card-text .button {
+    margin: 0 auto;
+  }
+
+  #differentials .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #differentials .container .why-choose-card {
+    width: 80%;
+  }
+
+  footer > .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer > .container .social-midias {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  footer > .container .find-us {
+    width: 100%;
+    text-align: center;
+  }
+  footer > .copyright > .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
