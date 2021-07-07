@@ -96,10 +96,75 @@ body {
     }
 }
 
+//Hamburguer Menu
+.hamburguer {
+    display: none;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+.hamburguer:after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 15%;
+
+
+    width: 70%;
+    height: 10%;
+    border-radius: 20px;
+
+    background-color: var(--white);
+
+    transition: 1s ease;
+}
+
+.hamburguer:before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 45%;
+
+
+    width: 40%;
+    height: 10%;
+    border-radius: 20px;
+
+    background-color: var(--white);
+
+    transition: 1s ease;
+}
+
+#hamburguer:checked~label .hamburguer:after {
+    transform: rotate(225deg);
+
+    top: 45%;
+    left: 15%;
+}
+
+#hamburguer:checked~label .hamburguer:before {
+    transform: rotate(-405deg);
+    width: 70%;
+    height: 10%;
+
+    top: 45%;
+    left: 15%;
+}
+
 //Desktop Menu e Mobile Menu
-.desktop-menu {
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     a {
+        display: block;
         color: var(--white);
         text-decoration: none;
         padding: 0.9375rem;
@@ -118,34 +183,6 @@ body {
     }
 }
 
-#mobile-menu {
-    display: none;    
-
-    a {
-        color: var(--white);
-        text-decoration: none;
-        padding: 0.9375rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        transition: 0.4s;
-    }
-
-    ul li {
-        display: block;
-        list-style: none;
-    }
-
-    &.active {
-        display: flex;
-        width: 80%;        
-    }
-}
-
-
-#btn-mobile {
-    display: none;
-}
-
 //Header
 
 .full-screen-video-container {
@@ -157,7 +194,7 @@ body {
     background: linear-gradient(to right, #00000093, #00000093), no-repeat top center;
 
 
-    //Nav Menu e Logo
+    // Logo e Vídeo
 
     >.container {
         display: flex;
@@ -398,35 +435,44 @@ footer {
 }
 
 @media screen and (max-width: 650px) {
-    .desktop-menu {
-        display: none;
+
+    //Menu Mobile
+    .hamburguer {
+        display: block;
+        z-index: 999;
+
+        top: 50px;
+        right: 0;
+        // position: fixed;
     }
 
-    #mobile-menu {        
-        position: absolute;
-        width: 0;
-        height: calc(100vh);
+    .menu {
+        position: fixed;
         top: 0;
-        right: 0;
-        background: var(--blue);
-        align-items: flex-start; 
-        justify-content: center; 
-        text-align: center;
-        z-index: 1000;
+        right: -100%;
+        width: 100%;
+        // max-width: 75vw;
+        height: 100vh;
+        justify-content: center;
+
+        background-color: var(--blue); 
         
-        ul li{            
-            position: relative;            
-            top: 100px;
-            margin: 20px;
+        transition: .5s ease;
+
+        ul li {
+            text-align: center;
+            margin: 0 auto;
+            display: block;            
+
+        }
+
+        &.active{
+            right: 0;
         }
     }
 
-    #btn-mobile {
-        display: block;
-        padding: 5px;
-        margin-right: 1rem;
-        z-index: 99999;
-        
+    .full-screen-video-container > .container{
+        align-items: unset;
     }
 
     //Serviços
