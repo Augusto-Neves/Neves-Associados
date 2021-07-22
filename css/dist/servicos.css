@@ -1,0 +1,69 @@
+.background-content {
+  position: relative;
+  min-height: 20vh;
+  width: 100vw;
+  overflow: hidden;
+  background: linear-gradient(to right, #00000093, #00000093), no-repeat top center;
+}
+.background-content > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.background-content > img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.background-content .banner-content {
+  display: flex;
+  height: 12.75rem;
+  margin: 1rem 0;
+}
+.background-content .banner-content > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: flex-end;
+  color: var(--white);
+  text-align: center;
+}
+.background-content .banner-content > .container h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 500;
+}
+.background-content .banner-content > .container h1 {
+  letter-spacing: normal;
+  font-size: 57px;
+  font-weight: 800;
+  text-transform: capitalize;
+  line-height: 1.3em;
+}
+
+@media screen and (max-width: 650px) {
+  .background-content > .container {
+    align-items: unset;
+  }
+}
+@media screen and (max-width: 466px) {
+  .background-content .banner-content > .container h3 {
+    text-transform: uppercase;
+    font-size: 21px;
+    font-weight: 500;
+  }
+  .background-content .banner-content > .container h1 {
+    letter-spacing: normal;
+    font-size: 39px;
+    font-weight: 800;
+    text-transform: capitalize;
+    line-height: 1.3em;
+  }
+}

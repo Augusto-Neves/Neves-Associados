@@ -165,4 +165,8 @@
   .full-screen-video-container .full-screen-video-content > .container h1 {
     font-size: 45px;
   }
+
+  #services .container .card .card-img img {
+    width: 250px;
+  }
 }

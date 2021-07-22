@@ -14,7 +14,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 1rem 2%;        
+        padding: 1rem 2%;
     }
 
     video {
@@ -224,5 +224,15 @@
 
     .full-screen-video-container .full-screen-video-content>.container h1 {
         font-size: 45px;
+    }
+
+    #services .container {
+
+        //Cards  
+        .card {
+            .card-img img {
+                width: 250px;
+            }
+        }
     }
 }
