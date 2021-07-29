@@ -68,6 +68,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
+  padding: 10px 2%;
 }
 #contact-us .contact-area .info .item-wrapper .item {
   display: flex;
@@ -132,6 +133,7 @@
 }
 #contact-us .contact-area .form form {
   width: 70%;
+  max-width: 23.75rem;
   margin: 0 auto;
   padding: 1rem;
   background: rgba(247, 245, 251, 0.05);
@@ -152,7 +154,7 @@
 #contact-us .contact-area .form form input {
   margin-bottom: 1rem;
   width: 100%;
-  height: 30px;
+  height: 35px;
   padding: 10px;
   border-radius: 10px;
   border: 1.5px solid var(--black);
@@ -195,4 +197,34 @@
 }
 #map iframe {
   width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  #contact-us .contact-area {
+    flex-direction: column;
+  }
+  #contact-us .contact-area .info,
+#contact-us .contact-area .form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  #contact-us .contact-area .info .item-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact-us .contact-area .info .item-wrapper .item {
+    width: 100%;
+  }
+  #contact-us .contact-area .form form {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 466px) {
+  #contact-us .contact-area .info .item-wrapper .item {
+    align-items: center;
+  }
+  #contact-us .contact-area .info .item-wrapper .item .item-header {
+    flex-direction: column;
+  }
 }

@@ -77,6 +77,7 @@
             justify-content: space-between;
             align-items: flex-start;
             gap: 1rem;
+            padding: 10px 2%;
 
             .item {
                 display: flex;
@@ -154,6 +155,7 @@
 
         .form form {
             width: 70%;
+            max-width: 23.75rem;
             margin: 0 auto;
             padding: 1rem;
             background: rgba(247, 245, 251, 0.05);
@@ -167,7 +169,7 @@
                 margin-bottom: 10px;
             }
 
-            div > span {
+            div>span {
                 color: var(--blue);
                 font-weight: bold;
                 font-size: 1.125rem;
@@ -176,7 +178,7 @@
             input {
                 margin-bottom: 1rem;
                 width: 100%;
-                height: 30px;
+                height: 35px;
                 padding: 10px;
                 border-radius: 10px;
                 border: 1.5px solid var(--black);
@@ -202,10 +204,10 @@
                 cursor: pointer;
                 transition: .5s ease-in-out;
 
-                i{
-                  margin-right: 4px;                   
+                i {
+                    margin-right: 4px;
                 }
-                
+
 
                 span {
                     font-size: 1rem;
@@ -214,7 +216,7 @@
                     color: var(--white);
                 }
 
-                &:hover{
+                &:hover {
                     transform: scale(1.1);
                     background: var(--blue-lighter);
                 }
@@ -225,8 +227,48 @@
 
 #map {
     margin: 40px 0;
-    
-    iframe{
+
+    iframe {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #contact-us .contact-area {
+        flex-direction: column;
+
+        .info,
+        .form {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:650px) {
+    #contact-us .contact-area {
+        .info .item-wrapper {
+            flex-direction: column;
+            align-items: center;
+
+            .item {
+                width: 100%;
+            }
+        }
+
+        .form form {
+            width: 85%;
+        }
+    }
+}
+
+@media screen and (max-width: 466px) {
+    #contact-us .contact-area .info .item-wrapper {
+        .item {
+            align-items: center;
+            .item-header {
+                flex-direction: column;
+            }
+        }
+
     }
 }
