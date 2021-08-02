@@ -27,6 +27,7 @@ body {
   justify-content: space-between;
   flex-direction: column;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .container {
