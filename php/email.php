@@ -49,7 +49,7 @@
 
         $headers  = "MIME-Version: 1.1\r\n";
         $headers .= "Content-type: text/plain; charset=UTF-8\r\n";
-        $headers .= "From: site@neveseassociados.com.br\r\n"."X=Mailer:PHP/".phpversion();; // remetente
+        $headers .= "From: site@neveseassociados.com.br\r\n"."X=Mailer:PHP/".phpversion(); // remetente
         $headers .= "Return-Path: site@neveseassociados.com.br\r\n"; // return-path
         $headers .= "Disposition-Notification-To:".$email. "\r\n";                    
 
