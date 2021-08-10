@@ -70,6 +70,7 @@
 }
 #about-us .about-us-content .about-us-image img {
   width: 100%;
+  border-radius: 20px;
 }
 
 #our-values {
@@ -108,25 +109,8 @@
   font-weight: 400;
 }
 
-#banner {
-  position: relative;
-  min-height: 50vh;
-  width: 100vw;
-  overflow: hidden;
-}
-#banner > img {
-  position: absolute;
-  width: auto;
-  height: auto;
-  min-width: 100%;
-  min-height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 #learn-more {
-  background-color: var(--beige);
+  background-color: var(--white);
   margin: 80px 0;
 }
 #learn-more .highlight {
@@ -203,10 +187,5 @@
     font-weight: 800;
     text-transform: capitalize;
     line-height: 1.3em;
-  }
-
-  #banner > img {
-    top: 75%;
-    left: 135%;
   }
 }
