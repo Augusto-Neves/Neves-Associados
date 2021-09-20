@@ -130,6 +130,7 @@
   color: var(--blue);
   font-weight: bold;
   font-size: 1.125rem;
+  font-family: "Montserrat", sans-serif;
 }
 #contact-us .contact-area .form form {
   width: 70%;
@@ -150,6 +151,7 @@
   color: var(--blue);
   font-weight: bold;
   font-size: 1.125rem;
+  font-family: "Montserrat", sans-serif;
 }
 #contact-us .contact-area .form form input {
   margin-bottom: 1rem;

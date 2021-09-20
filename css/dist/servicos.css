@@ -70,6 +70,7 @@
 #services .container .card .card-text .card-text-header h2 {
   color: var(--blue);
   font-size: var(--h2-title);
+  font-family: "Montserrat", sans-serif;
 }
 #services .container .card:nth-child(3) .card-img {
   order: 2;
@@ -113,6 +114,7 @@
 #other-specialties .container .other-specialties-card h3 {
   text-align: center;
   color: var(--blue);
+  font-family: "Montserrat", sans-serif;
 }
 #other-specialties .container .other-specialties-card p {
   text-align: center;

@@ -103,6 +103,7 @@
 }
 #our-values .value-card h2 {
   color: var(--blue);
+  font-family: "Montserrat", sans-serif;
 }
 #our-values .value-card p {
   color: var(--black);

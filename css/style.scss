@@ -17,6 +17,7 @@
 
 //Fonte
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
 
 //Reset CSS
 * {
@@ -35,11 +36,14 @@ body {
     overflow-x: hidden;
 
     scroll-behavior: smooth;
-    
+
 }
 
-body{
+body {
     background-color: var(--white);
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -74,6 +78,7 @@ body{
         color: var(--blue);
         font-size: var(--h2-title);
         line-height: 3.125rem;
+        font-family: 'Montserrat', sans-serif;
     }
 
 }
@@ -193,7 +198,7 @@ body{
 }
 
 .logo a img {
-    width: 125px;    
+    width: 125px;
 }
 
 footer {
@@ -280,6 +285,15 @@ footer {
                 }
             }
         }
+    }
+}
+
+//Media Queries
+@media (pointer: coarse) {
+
+    html,
+    body {
+        scroll-behavior: auto;
     }
 }
 
