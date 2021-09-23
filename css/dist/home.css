@@ -52,6 +52,7 @@
 
 #services .container .card {
   display: flex;
+  align-items: center;
   max-width: 800px;
   margin: 80px auto;
   gap: 80px;
@@ -94,7 +95,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
   padding: 40px 0;
 }
@@ -139,7 +140,6 @@
   #services .container .card {
     flex-direction: column;
     justify-items: center;
-    align-items: center;
   }
   #services .container .card:nth-child(3) .card-img {
     order: 1;
@@ -156,7 +156,6 @@
 
   #differentials .container {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
   #differentials .container .why-choose-card {

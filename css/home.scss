@@ -55,7 +55,7 @@
                 font-weight: 800;
                 text-transform: capitalize;
                 line-height: 1.3em;
-                text-shadow: 0px 0px 10px rgb(0, 0, 0);                
+                text-shadow: 0px 0px 10px rgb(0, 0, 0);
             }
         }
     }
@@ -70,6 +70,7 @@
     //Cards  
     .card {
         display: flex;
+        align-items: center;
         max-width: 800px;
         margin: 80px auto;
 
@@ -128,7 +129,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         gap: 1rem;
         padding: 40px 0;
 
@@ -185,7 +186,6 @@
         .card {
             flex-direction: column;
             justify-items: center;
-            align-items: center;
 
             &:nth-child(3) {
                 .card-img {
@@ -212,7 +212,6 @@
 
         .container {
             flex-direction: column;
-            justify-content: center;
             align-items: center;
 
             .why-choose-card {

@@ -25,6 +25,12 @@
 </head>
 
 <body>
+    <!-- Modal -->
+    <!-- <div id="modal">
+        <span>Email enviado com sucesso</span>
+        <button type="button" id="modal_button"><i class="fas fa-times-circle fa-lg"></i></button>
+    </div> -->
+    
     <!-- Header -->
     <header>
         <div class="background-content">
@@ -181,6 +187,13 @@
     </footer>
     <!-- Scripts JS -->
     <script src="./js/mobileMenu.js"></script>
+    <script>
+        const button = document.getElementById('modal_button');
+        button.addEventListener('click', ()=> {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        })
+    </script>
 </body>
 
 </html>
