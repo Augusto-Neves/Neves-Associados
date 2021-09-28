@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Neves & Associados</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/dist/style.min.css">
+    <link rel="stylesheet" href="./css/dist/contato.min.css">
+
+   <!--Fav-Icon-->
+   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>  
+    <!-- Header -->
+    <header>
+        <div class="background-content">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><img src="./img/logo.png" alt="Neves e Associados Logo"></a>
+                </div>
+
+                <input type="checkbox" name="hamburguer" id="hamburguer" style="display: none;">
+                <label for="hamburguer">
+                    <div class="hamburguer"></div>
+                </label>
+
+                <nav class="menu">
+                    <ul>
+                        <li><a href="./index.html">Início</a></li>
+                        <li><a href="./quem-somos.html">Quem Somos</a></li>
+                        <li><a href="./servicos.html">Serviços</a></li>
+                        <li><a href="./contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Banner Image -->
+            <img src="./img/bg-06-free-img.jpg" alt="Imagem de fundo">
+
+            <div class="banner-content">
+                <div class="container">
+                    <h3>Fale conosco</h3>
+                    <h1>Contato</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Contact us -->
+        <section id="contact-us">
+            <div class="container">
+                <div class="header">
+                    <h3>Entre em Contato</h3>
+                    <h2>Fale com a gente</h2>
+                </div>
+                <div class="contact-area">
+                    <div class="info">
+                        <div class="item-wrapper">
+                            <div class="item">
+                                <div class="item-header">
+                                    <i class="fas fa-phone-alt fa-lg"></i>
+                                    <span>Telefone</span>
+                                </div>
+                                <span>(87) 99124-2960</span>
+                            </div>
+                            <div class="item">
+                                <div class="item-header">
+                                    <i class="far fa-envelope fa-lg"></i>
+                                    <span>Email</span>
+                                </div>
+                                <span>contato@neveseassociados.com.br</span>
+                            </div>
+                        </div>
+                        <div class="item-wrapper">
+                            <div class="item">
+                                <div class="item-header">
+                                    <i class="far fa-map fa-lg"></i>
+                                    <span>Endereço</span>
+                                </div>
+                                <span>Galeria Manhattan Center, Sala 14, Rua Manoel Clementino, 1002, Centro,
+                                    Petrolina-PE</span>
+                            </div>
+                            <div class="item">
+                                <div class="item-header">
+                                    <i class="fas fa-users fa-lg"></i>
+                                    <span>Mídias Sociais</span>
+                                </div>
+                                <ul>
+                                    <li><a href="https://www.instagram.com/neveseassociados/" target="blank"><i
+                                                class="fab fa-instagram fa-lg"></i></a></li>
+                                    <li><a href="https://www.facebook.com/Neves-Associados-Gest%C3%A3o-e-consultoria-104852704616075"
+                                            target="blank"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+                                    <li><a href="https://api.whatsapp.com/send?phone=558791242960&text=Ol%C3%A1%20eu%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20prestados%20por%20voc%C3%AAs!"
+                                            target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <form id="contactform" method="post" action="php/email.php">
+                            <div>
+                                <span>Contato</span>
+                            </div>
+                            <div>
+                                <input type="text" name="name" id="name" placeholder="Nome" required>
+                            </div>
+                            <div>
+                                <input type="text" name="subject" id="subject" placeholder="Assunto" required>
+                            </div>
+                            <div>
+                                <input type="email" name="email" id="email" placeholder="Email" required>
+                            </div>
+                            <div>
+                                <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                            </div>
+                            <button type="submit">
+                                <i class="far fa-paper-plane"></i>
+                                <span>Enviar</span>
+                            </button>
+                            <div id="resp"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map -->
+        <section id="map">
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="1920" height="400" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=Galeria%20Manhattan%20Center,%20Sala%2014,%20Rua%20Manoel%20Clementino,%201002,%20Centro,%20Petrolina-PE&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                        href="https://fmovies-online.net">fmovies</a><br>
+                    <style>
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            height: 400px;
+                            width: 100%;
+                        }
+                    </style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+                    <style>
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 400px;
+                            width: 100%;
+                        }
+                    </style>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-midias">
+                <h3>Nossas Redes Sociais</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/neveseassociados/" target="blank"><i
+                                class="fab fa-instagram fa-2x"></i></a></li>
+                    <li><a href="https://www.facebook.com/Neves-Associados-Gest%C3%A3o-e-consultoria-104852704616075"
+                            target="blank"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+
+                    <li><a href="https://api.whatsapp.com/send?phone=558791242960&text=Ol%C3%A1%20eu%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20prestados%20por%20voc%C3%AAs!"
+                            target="blank"><i class="fab fa-whatsapp fa-2x"></i></a></li>
+                </ul>
+            </div>
+            <div class="find-us">
+                <h3>Onde nos encontrar</h3>
+                <p><strong>Endereço:</strong> Galeria Manhattan Center, Sala 14, Rua Manoel Clementino, 1002, Centro,
+                    Petrolina-PE</p>
+                <p><strong>Contato:</strong> (87) 99124-2960</p>
+                <p><strong>Email:</strong> contato@neveseassociados.com.br</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <span>Neves & Associados©</span>
+                <span>Desenvolvido por <a href="https://www.linkedin.com/in/augustonevesdev/" target="blank">Augusto
+                        Neves</a></span>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts JS -->
+    <script src="./js/mobileMenu.min.js"></script>
+    <script>
+        $('#contactform').submit(function (e) {
+            e.preventDefault();
+            const nome = $('input[name="nome"]').val();
+            const assunto = $('input[name="subject"]').val();
+            const email = $('input[name="email"]').val();
+            const mensagem = $('input[name="message"]').val();
+
+            $.ajax({
+                url: 'php/email.php',
+                type: 'POST',
+                data: {
+                    nome: nome,
+                    subject: assunto,
+                    email: email,
+                    mensagem: mensagem
+                },
+                success: function (response) {
+                    document.getElementById("contactform").reset();
+                    $('#resp').html(response);
+                },
+                error: function (xhr, status, error, response) {
+                    console.log(xhr.responseText);
+                    $('#resp').html(response);
+                }
+            });
+            return false;
+        });
+    </script>
+</body>
+
+</html>

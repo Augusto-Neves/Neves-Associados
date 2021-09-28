@@ -1,0 +1,27 @@
+{
+  "name": "neves-associados",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Augusto-Neves/Neves-Associados.git",
+  "author": "Augusto Neves <augusto.agt1995@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "gulp-image": "^6.2.1"
+  }
+}
