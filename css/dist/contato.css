@@ -1,9 +1,9 @@
 #modal {
+  display: none;
+  position: absolute;
   background-color: var(--blue);
   color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   gap: 1rem;
   width: 100vw;
   height: 40px;
@@ -182,6 +182,7 @@
   padding: 10px;
   border-radius: 10px;
   border: 1.5px solid var(--black);
+  outline: none;
 }
 #contact-us .contact-area .form form textarea {
   width: 100% !important;
@@ -219,7 +220,7 @@
 #map {
   margin: 40px 0;
 }
-#map iframe {
+#map .mapouter iframe {
   width: 100%;
 }
 

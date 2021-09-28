@@ -24,13 +24,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <!-- Modal -->
-    <!-- <div id="modal">
-        <span>Email enviado com sucesso</span>
-        <button type="button" id="modal_button"><i class="fas fa-times-circle fa-lg"></i></button>
-    </div> -->
-    
+<body>  
     <!-- Header -->
     <header>
         <div class="background-content">
@@ -116,7 +110,7 @@
                         </div>
                     </div>
                     <div class="form">
-                        <form action="">
+                        <form id="contactform" method="post" action="php/email.php">
                             <div>
                                 <span>Contato</span>
                             </div>
@@ -136,7 +130,7 @@
                                 <i class="far fa-paper-plane"></i>
                                 <span>Enviar</span>
                             </button>
-
+                            <div id="resp"></div>
                         </form>
                     </div>
                 </div>
@@ -145,13 +139,29 @@
 
         <!-- Map -->
         <section id="map">
-            <iframe width="1920" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                id="gmap_canvas"
-                src="https://maps.google.com/maps?width=1920&amp;height=400&amp;hl=en&amp;q=Galeria%20Manhattan%20Center,%20Sala%2014%20Petrolina+(Neves%20&amp;%20Associados)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-            <a href='http://maps-generator.com/pt'>http://maps-generator.com/pt</a>
-            <script type='text/javascript'
-                src='https://embedmaps.com/google-maps-authorization/script.js?id=960bab07e7183e4c201136299999538d6687783c'>
-            </script>
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="1920" height="400" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=Galeria%20Manhattan%20Center,%20Sala%2014,%20Rua%20Manoel%20Clementino,%201002,%20Centro,%20Petrolina-PE&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                        href="https://fmovies-online.net">fmovies</a><br>
+                    <style>
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            height: 400px;
+                            width: 100%;
+                        }
+                    </style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+                    <style>
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 400px;
+                            width: 100%;
+                        }
+                    </style>
+                </div>
+            </div>
         </section>
     </main>
     <!-- Footer -->
@@ -188,11 +198,33 @@
     <!-- Scripts JS -->
     <script src="./js/mobileMenu.js"></script>
     <script>
-        const button = document.getElementById('modal_button');
-        button.addEventListener('click', ()=> {
-            const modal = document.getElementById('modal');
-            modal.style.display = 'none';
-        })
+        $('#contactform').submit(function (e) {
+            e.preventDefault();
+            const nome = $('input[name="nome"]').val();
+            const assunto = $('input[name="subject"]').val();
+            const email = $('input[name="email"]').val();
+            const mensagem = $('input[name="message"]').val();
+
+            $.ajax({
+                url: 'php/email.php',
+                type: 'POST',
+                data: {
+                    nome: nome,
+                    subject: assunto,
+                    email: email,
+                    mensagem: mensagem
+                },
+                success: function (response) {
+                    document.getElementById("contactform").reset();
+                    $('#resp').html(response);
+                },
+                error: function (xhr, status, error, response) {
+                    console.log(xhr.responseText);
+                    $('#resp').html(response);
+                }
+            });
+            return false;
+        });
     </script>
 </body>
 

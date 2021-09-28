@@ -1,26 +1,3 @@
-#modal{
-    background-color: var(--blue);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    width: 100vw;
-    height: 40px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    transition: 1s ease-in-out;
-
-    button{
-        background-color: transparent;
-        cursor: pointer;
-        color: var(--white);        
-        border: 0;
-    }
-}
-
 //Header
 .background-content {
     position: relative;
@@ -177,7 +154,7 @@
             }
         }
 
-        .form form {
+        .form #contactform {
             width: 70%;
             max-width: 23.75rem;
             margin: 0 auto;
@@ -246,6 +223,14 @@
                     background: var(--blue-lighter);
                 }
             }
+
+            #resp {
+                p {
+                    color: var(--blue);
+                    text-align: center;
+                    font-size: 14px;
+                }
+            }
         }
     }
 }
@@ -253,7 +238,7 @@
 #map {
     margin: 40px 0;
 
-    iframe {
+    .mapouter iframe {
         width: 100%;
     }
 }
@@ -290,6 +275,7 @@
     #contact-us .contact-area .info .item-wrapper {
         .item {
             align-items: center;
+
             .item-header {
                 flex-direction: column;
             }
