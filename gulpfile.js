@@ -5,7 +5,6 @@ const uglify = require('gulp-uglify');
 const uglifycss = require('gulp-uglifycss');
 const rename = require('gulp-rename');
 const image = require('gulp-image');
-const { dest } = require('vinyl-fs');
 
 function moverArquivosHtml() {
     return gulp.src('./*.html')
