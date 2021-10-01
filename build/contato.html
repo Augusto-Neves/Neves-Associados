@@ -24,7 +24,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
-<body>  
+<body>
     <!-- Header -->
     <header>
         <div class="background-content">
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                     <div class="form">
-                        <form id="contactform" method="post" action="php/email.php">
+                        <form id="contactform" method="POST" action="./php/email.php">
                             <div>
                                 <span>Contato</span>
                             </div>
@@ -200,13 +200,14 @@
     <script>
         $('#contactform').submit(function (e) {
             e.preventDefault();
-            const nome = $('input[name="nome"]').val();
-            const assunto = $('input[name="subject"]').val();
-            const email = $('input[name="email"]').val();
-            const mensagem = $('input[name="message"]').val();
+
+            let nome = $('#name').val();
+            let assunto = $('#subject').val();
+            let email = $('#email').val();
+            let mensagem = $('#message').val();
 
             $.ajax({
-                url: 'php/email.php',
+                url: './php/email.php',
                 type: 'POST',
                 data: {
                     nome: nome,
