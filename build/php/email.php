@@ -17,8 +17,8 @@
         $headers  = "MIME-Version: 1.1\r\n";
         $headers .= "Content-type: text/plain; charset=UTF-8\r\n";
         $headers .= "From: site@neveseassociados.com.br\r\n"."X=Mailer:PHP/".phpversion(); // remetente
-        $headers .= "Return-Path: site@neveseassociados.com.br\r\n"; // return-path                            
-
+        $headers .= "Return-Path: site@neveseassociados.com.br\r\n"; // return-path                        
+        
         if(mail($to, $email_subject, $body, $headers)){
             echo("<p style='text-align: center; color: var(--blue); font-size: 14px; font-weight: 700'>Seu e-mail foi enviado com sucesso!</p>"); 
                        
